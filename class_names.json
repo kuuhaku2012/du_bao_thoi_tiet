@@ -1,0 +1,102 @@
+{
+    "dataset_name": "dataset",
+    "total_classes": 11,
+    "class_names": [
+        "dew",
+        "fogsmog",
+        "frost",
+        "glaze",
+        "hail",
+        "lightning",
+        "rain",
+        "rainbow",
+        "rime",
+        "sandstorm",
+        "snow"
+    ],
+    "class_indices": {
+        "dew": 0,
+        "fogsmog": 1,
+        "frost": 2,
+        "glaze": 3,
+        "hail": 4,
+        "lightning": 5,
+        "rain": 6,
+        "rainbow": 7,
+        "rime": 8,
+        "sandstorm": 9,
+        "snow": 10
+    },
+    "split_stats": {
+        "dew": {
+            "total": 698,
+            "train": 488,
+            "val": 104,
+            "test": 106
+        },
+        "fogsmog": {
+            "total": 851,
+            "train": 595,
+            "val": 127,
+            "test": 129
+        },
+        "frost": {
+            "total": 475,
+            "train": 332,
+            "val": 71,
+            "test": 72
+        },
+        "glaze": {
+            "total": 639,
+            "train": 447,
+            "val": 95,
+            "test": 97
+        },
+        "hail": {
+            "total": 591,
+            "train": 413,
+            "val": 88,
+            "test": 90
+        },
+        "lightning": {
+            "total": 377,
+            "train": 263,
+            "val": 56,
+            "test": 58
+        },
+        "rain": {
+            "total": 526,
+            "train": 368,
+            "val": 78,
+            "test": 80
+        },
+        "rainbow": {
+            "total": 232,
+            "train": 162,
+            "val": 34,
+            "test": 36
+        },
+        "rime": {
+            "total": 1160,
+            "train": 812,
+            "val": 174,
+            "test": 174
+        },
+        "sandstorm": {
+            "total": 692,
+            "train": 484,
+            "val": 103,
+            "test": 105
+        },
+        "snow": {
+            "total": 621,
+            "train": 434,
+            "val": 93,
+            "test": 94
+        }
+    },
+    "model_path": "weather_model.pth",
+    "img_size": 260,
+    "framework": "pytorch",
+    "tta_accuracy": 94.33
+}

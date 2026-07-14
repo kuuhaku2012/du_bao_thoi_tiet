@@ -1,0 +1,30 @@
+HƯỚNG DẪN SỬ DỤNG DỰ ÁN NHẬN DIỆN THỜI TIẾT
+
+1. Cài đặt các thư viện cần thiết:
+Mở Command Prompt hoặc PowerShell và chạy lệnh sau:
+pip install numpy torch torchvision pillow customtkinter matplotlib
+
+* Lưu ý: Nếu máy có GPU NVIDIA, hãy cài phiên bản PyTorch hỗ trợ CUDA để chạy nhanh hơn (ví dụ CUDA 12.1):
+pip install torch torchvision --index-url https://download.pytorch.org/whl/cu121
+
+2. Quy trình chạy các file script:
+
+- Bước 1: Chia tập dữ liệu và tạo nhãn
+  Chạy lệnh: python export_labels.py
+  (Yêu cầu: Dữ liệu ảnh gốc đã được đặt trong thư mục dataset/)
+
+- Bước 2: Huấn luyện mô hình EfficientNetV2-S
+  Chạy lệnh: python train.py
+  (Quá trình chạy sẽ tạo ra file trọng số weather_model.pth và biểu đồ training_charts.png)
+
+- Bước 3: Đánh giá mô hình trên tập kiểm thử
+  Chạy lệnh: python evaluate.py
+  (Quá trình chạy sẽ tạo ra ma trận nhầm lẫn confusion_matrix.png và báo cáo chi tiết)
+
+- Bước 4: Khởi chạy giao diện ứng dụng (GUI)
+  Chạy lệnh: python app.py
+  (Cho phép chọn ảnh từ máy tính để phân tích và nhận diện thời tiết)
+
+3. Lưu ý quan trọng:
+- Khi chạy app.py, các file weather_model.pth và class_names.json phải nằm cùng thư mục.
+- Khuyến khích sử dụng GPU CUDA khi huấn luyện để tiết kiệm thời gian (huấn luyện trên CPU sẽ rất chậm).
